@@ -1,0 +1,229 @@
+= _JBoss Forge_ [subtle blocktext]#Introduction and addon development#
+Vineet Reynolds ; Red Hat; @VineetReynolds
+:license: CC BY-SA 4.0
+include::attributes.adoc[]
+
+== !
+
+[.statement]
+*Objectives* +
+Discover JBoss Forge. Learn how to extend it for your needs.
+
+[NOTE]
+[role="speaker"]
+====
+* This is a talk focussed on showcasing JBoss Forge to newbies, and help them discover features in JBoss Forge.
+* Eventually, they will learn on extending JBoss Forge to build in capabilities that would suit their needs.
+* This talk is for you if you're a beginner and you want a tool that helps you make fewer mistakes.
+* The contents of the talk also apply if you're a pro and you want a tool that automates away the trivial bits.
+* The talk is relevant even if you have unique needs, and also when your company or customers have unique needs.
+====
+
+
+[.topic.source]
+== Vineet Reynolds
+
+====
+* Senior Software Engineer, JBoss Developer Experience, Red Hat
+* Contributor to 
+** JBoss Forge - Scaffolding and others
+** JBoss Developer experience materials
+* Maintainer of TicketMonster
+====
+
+[NOTE ]
+[role="speaker"]
+====
+* I'm Vineet, and I work as an engineer for JBoss at Red Hat
+* I work primarily in the JBoss Developer experience team.
+* Primarily on JBoss Forge and JBoss Developer Framework to make it easier for developers to get started with Java EE development.
+====
+
+
+== !
+
+[.statement]
+Let's talk about [blocktext]#*productivity*#
+
+
+== !
+
+[{hidecaption}]
+.Every one wants development to be simple.
+image::6322092360_b5ce3a9d83_b.jpg[]
+
+
+== !
+
+[{hidecaption}]
+.Some expect to learn one language, a few APIs, maybe one framework, and meet all demands with a limited set of primitives.
+image::6322092360_b5ce3a9d83_b.jpg[]
+
+
+== !
+
+[{hidecaption}]
+.But in reality - One language is hardly sufficient. APIs are numerous. Frameworks are dime a dozen.
+image::9620369338_3438a8e3d0_b.jpg[]
+
+
+== !
+
+[{hidecaption}]
+.And it takes time to discover best practices relevant to your development stack.
+image::9620369338_3438a8e3d0_b.jpg[]
+
+
+== !
+
+[{hidecaption}]
+.Achieving expertise is not easy. It takes time.
+image::5248624748_885057e7a5_b.jpg[]
+
+
+== !
+
+[{hidecaption}]
+.Scaling expertise across teams is even tougher.
+image::5248624748_885057e7a5_b.jpg[]
+
+
+[.topic.source]
+== Speaking of Forge...
+
+* Aids in _automation_ of _repetitive tasks_.
+* Performs _generation_ of _boilerplate code_.
+* Helps you focus on _business-centric activities_.
+* Available as an _Eclipse plugin_ and a _CLI tool_.
+** for now...
+
+
+[.topic.source]
+== Install as an Eclipse plugin...
+
+image:qrcode.png[]
+
+
+[.topic.source]
+== Download and get started with the CLI tool
+
+image:qrcode-cli.png[]
+
+
+== !
+
+[.statement]
+*JBoss Forge* +
+in Action
+
+
+== !
+
+[{hidecaption}]
+.Create a project
+image::3743235527_eed35ccb71_o.png[]
+
+
+== !
+
+[{hidecaption}]
+.Setup JPA, CDI, BV etc.
+image::3901150974_2693a76db9_o.png[]
+
+
+== !
+
+[{hidecaption}]
+.Scaffold an application
+image::4680568796_b5fa0c2885_o.png[]
+
+
+[.topic.source]
+== Looking back...
+
+* Forge commands can _consume_ the _output_ of others
+** Goes beyond offerings from Maven archetypes etc.
+* Forge is not _constrained_ to any _framework_.
+** Very much unlike tools tied to frameworks.
+
+
+[.topic.source]
+== Looking back...
+* It offers productivity to _beginners_ and _experts_ alike.
+** Caters to _IDE_ and _command-line_ users.
+* It provides _'sugar'_ at a higher level than _language constructs_.
+** Productivity is not limited by requiring you to be aware of _"syntactic sugar"_.
+** "I need a persistence layer" vs "I need to declare a property"
+
+
+== !
+
+[{hidecaption}]
+.Engineer your workflow. Write your own addons
+image::2713475713_392003b2da_o.jpg[]
+
+
+[.topic.recap]
+== Recap
+
+JBoss Forge :
+
+* can _automate_ common development _tasks_
+* allows you to _extend_ it's _behavior_
+** with a _simple_ programming _model_
+* _without constraining_ you to a specific _environment_
+
+
+== !
+
+[.statement]
+*Questions ?*
+
+
+[.topic.source]
+== Getting in touch
+
+* [icon-github]'{zwsp}' http://github.com/forge[Forge _source + dev guides + addons_]
+* http://community.jboss.org/en/forge[The _community forums_]
+* [icon-envelope]'{zwsp}' mailto:forge-users@lists.jboss.org[The _user_ mailing list]
+* [icon-envelope]'{zwsp}' mailto:forge-dev@lists.jboss.org[The _dev_ mailing list]
+* irc://irc.freenode.org/#forge[IRC - _#forge_ on FreeNode]
+* http://forge.jboss.org[The Forge _site_]
+* [icon-twitter]'{zwsp}' @JBossForge
+
+
+[.topic.source]
+== Credits
+
+NOTE: Slides generated with Asciidoctor and DZSlides backend
+
+NOTE: Original slide template - Dan Allen & Sarah White
+
+
+[.topic.source]
+== Credits
+
+NOTE: http://www.flickr.com/photos/seattlemunicipalarchives/3743235527/[Survey crew, 1952] by http://www.flickr.com/photos/seattlemunicipalarchives/[Seattle Municipal Archives], used under CC BY 2.0
+
+NOTE: http://www.flickr.com/photos/seattlemunicipalarchives/3901150974/[Lake Forest Park Reservoir under construction, 1962] by http://www.flickr.com/photos/seattlemunicipalarchives/[Seattle Municipal Archives], used under CC BY 2.0
+
+NOTE: http://www.flickr.com/photos/seattlemunicipalarchives/4680568796/[Municipal building under construction, 1961] by http://www.flickr.com/photos/seattlemunicipalarchives/[Seattle Municipal Archives], used under CC BY 2.0 / Cropped from original
+
+NOTE: http://www.flickr.com/photos/seattlemunicipalarchives/2713475713/[Engineer working on plans for Lake Union area, circa 1960s] by http://www.flickr.com/photos/seattlemunicipalarchives/[Seattle Municipal Archives], used under CC BY 2.0
+
+
+[.topic.source]
+== Credits
+
+NOTE: http://www.flickr.com/photos/kingbob86/5248624748/[RAAF History] by http://www.flickr.com/photos/kingbob86/[Timothy Swinson], used under CC BY / Desaturated from original 
+
+NOTE: http://www.flickr.com/photos/amphalon/6322092360/[Human ornithopter] by http://www.flickr.com/photos/amphalon/[Tom Wigley], used under CC BY-NC-SA 2.0
+
+NOTE: http://www.flickr.com/photos/criminalintent/9620369338/[Cockpit of a Concorde supersonic passenger jet] by http://www.flickr.com/photos/criminalintent/[Lars Plougmann], used under CC BY-SA 2.0
+
+
+[.topic.ending, hrole="name"]
+== JBoss Forge
+
+[.footer]
+[icon-twitter]'{zwsp}' @JBossForge

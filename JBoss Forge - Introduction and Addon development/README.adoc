@@ -1,0 +1,79 @@
+== What is this?
+
+This is a slide deck authored in http://asciidoc.org[Asiidoc], converted into a DZSlides deck using the https://github.com/asciidoctor/asciidoctor-backends[asciidoctor-backends] project.
+
+== Requirements
+
+* Asciidoctor 0.1.4 or higher
+
+To install
+----
+gem install asciidoctor tilt slim
+----
+
+== Initial setup
+
+This should done only if you want to prepare a new deck.
+
+Clone the asciidoctor-backends and custom dzslides repos:
+
+----
+git clone https://github.com/asciidoctor/asciidoctor-backends.git
+git clone https://github.com/mojavelinux/dzslides.git
+----
+
+Delete the underlying git repo and indices:
+
+----
+rm -rf asciidoctor-backends/.git
+rm -rf dzslides/.git
+----
+
+== Editing the slides
+
+The slides in `slides.adoc` are authored in Asciidoc. Read http://asciidoctor.org/docs/asciidoc-writers-guide[this guide] to get started on the syntax.
+Incorporate any content using plaintext.
+
+== Generating the slides
+
+=== Generate the HTML5 based slide deck:
+
+----
+asciidoctor -b dzslides -T asciidoctor-backends/slim/dzslides -a linkcss -a data-uri slides.adoc
+----
+
+=== Convert to PDF 
+
+Conversion of the HTML5 slide deck is performed using deck2pdf.
+
+https://jdk8.java.net/download.html[Java 8] is recommended to ensure that CSS3 font-faces are found and included correctly.
+
+==== Install Java 8
+
+----
+tar zxvf jdk-8-fcs-bin-b132-linux-x64-04_mar_2014.tar.gz -C /opt
+export JAVA_HOME=/opt/jdk1.8.0
+export PATH=$JAVA_HOME/bin:$PATH
+----
+
+==== Install deck2pdf
+
+Build deck2pdf
+
+----
+git clone https://github.com/melix/deck2pdf
+cd deck2pdf
+./gradlew distZip
+----
+
+Unzip the distribution somewhere and add to PATH
+----
+unzip deck2pdf/build/distributions/deck2pdf-0.1-SNAPSHOT.zip -d <DECK2PDF_HOME>
+export PATH=<DECK2PDF_HOME>/bin:$PATH
+----
+
+==== Convert the slides
+
+----
+deck2pdf --profile=dzslides slides.html slides.pdf
+----
