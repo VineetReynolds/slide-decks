@@ -165,6 +165,8 @@ image::5248624748_885057e7a5_b.jpg[]
 
 image:qrcode.png[]
 
+http://download.jboss.org/jbosstools/builds/staging/jbosstools-forge_master/all/repo/[Use this update site - Eclipse Kepler+]
+
 [NOTE]
 [role="speaker"]
 ====
@@ -177,6 +179,8 @@ image:qrcode.png[]
 == Download and get started with the CLI tool
 
 image:qrcode-cli.png[]
+
+https://repository.jboss.org/nexus/service/local/artifact/maven/redirect?r=releases&g=org.jboss.forge&a=forge-distribution&v=LATEST&e=zip&c=offline[Download the CLI ZIP]
 
 [NOTE]
 [role="speaker"]
@@ -281,6 +285,23 @@ image::4680568796_b5fa0c2885_o.png[]
 * You may think that switching to languages with more concise syntax will make your productive by cutting down on typing.
 * Forge can help you even more, by making operations themselves more concise, so you gain more productivity combining contextual operations with concise syntax.
 * For example, you've already seen how Forge manages properties and relations in JPA entities. No longer do you need to create a field, it's getter and an optional setter. Forge 'understands' properties in the context of JPA and how to manage them.
+====
+
+
+== !
+
+[{hidecaption}]
+.Before we extend  Forge, let's understand it.
+image::Forge2.0High-LevelArchitecture.png[]
+
+[NOTE]
+[role="speaker"]
+====
+* Forge use the Furance runtime to manage addons.
+* Furnace is closely linked to the JBoss Modules project, offering a modular classloading environement.
+* Capabilities can be added by deploying new addons.
+* Want a new scaffold provider? Deploy a new addon.
+* Want support for a new language? Deploy another addon.
 ====
 
 
