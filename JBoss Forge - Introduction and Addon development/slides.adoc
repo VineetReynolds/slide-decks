@@ -3,23 +3,6 @@ Vineet Reynolds ; Red Hat; @VineetReynolds
 :license: CC BY-SA 4.0
 include::attributes.adoc[]
 
-== !
-
-[.statement]
-*Objectives* +
-Discover JBoss Forge. Learn how to extend it for your needs.
-
-[NOTE]
-[role="speaker"]
-====
-* This is a talk focussed on showcasing JBoss Forge to newbies, and help them discover features in JBoss Forge.
-* Eventually, they will learn on extending JBoss Forge to build in capabilities that would suit their needs.
-* This talk is for you if you're a beginner and you want a tool that helps you make fewer mistakes.
-* The contents of the talk also apply if you're a pro and you want a tool that automates away the trivial bits.
-* The talk is relevant even if you have unique needs, and also when your company or customers have unique needs.
-====
-
-
 [.topic.source]
 == Vineet Reynolds
 
@@ -43,6 +26,23 @@ Discover JBoss Forge. Learn how to extend it for your needs.
 == !
 
 [.statement]
+*Objectives* +
+Discover JBoss Forge. Learn how to extend it for your needs.
+
+[NOTE]
+[role="speaker"]
+====
+* This is a talk focussed on showcasing JBoss Forge to newbies, and help them discover features in JBoss Forge.
+* Eventually, they will learn on extending JBoss Forge to build in capabilities that would suit their needs.
+* This talk is for you if you're a beginner and you want a tool that helps you make fewer mistakes.
+* The contents of the talk also apply if you're a pro and you want a tool that automates away the trivial bits.
+* The talk is relevant even if you have unique needs, and also when your company or customers have unique needs.
+====
+
+
+== !
+
+[.statement]
 Let's talk about [blocktext]#*productivity*#
 
 
@@ -52,6 +52,15 @@ Let's talk about [blocktext]#*productivity*#
 .Every one wants development to be simple.
 image::6322092360_b5ce3a9d83_b.jpg[]
 
+[NOTE]
+[role="speaker"]
+====
+* People walk away from complex and bloated programming models.
+* Does EJB 2 ring a bell ? What about JSF 1.x ?
+* In contrast, you have Ruby on Rails, Django, or even micro-frameworks like Flask and Sinatra.
+* And you now have people clamouring to use NodeJS because it allows you to share logic between the client and the server.
+====
+
 
 == !
 
@@ -60,11 +69,28 @@ image::6322092360_b5ce3a9d83_b.jpg[]
 image::6322092360_b5ce3a9d83_b.jpg[]
 
 
+[NOTE]
+[role="speaker"]
+====
+* In most of the previous examples, simplicity came at a price.
+* The frameworks work best in a set of scenarios, namely in web-app development, but not for everything.
+====
+
+
 == !
 
 [{hidecaption}]
 .But in reality - One language is hardly sufficient. APIs are numerous. Frameworks are dime a dozen.
 image::9620369338_3438a8e3d0_b.jpg[]
+
+[NOTE]
+[role="speaker"]
+====
+* These is a context in which you use the languages, APIs and frameworks.
+* Different contexts require different solutions.
+* You wouldn't really want to write your execution engines for enterprise apps in JavaScript today.
+* Nor would you want to write business rules in a 'programming' language.
+====
 
 
 == !
@@ -73,6 +99,13 @@ image::9620369338_3438a8e3d0_b.jpg[]
 .And it takes time to discover best practices relevant to your development stack.
 image::9620369338_3438a8e3d0_b.jpg[]
 
+[NOTE]
+[role="speaker"]
+====
+* Learning these takes time.
+* Discovering how to use them effectively takes even more time.
+====
+
 
 == !
 
@@ -80,12 +113,30 @@ image::9620369338_3438a8e3d0_b.jpg[]
 .Achieving expertise is not easy. It takes time.
 image::5248624748_885057e7a5_b.jpg[]
 
+[NOTE]
+[role="speaker"]
+====
+* If you look at the Dreyfus model of skill acquisition, most people start off as novices.
+* They learn the rules on how to use their toolkits. But they may not know when to apply them.
+* Eventually they begin to gain contextual knowledge on when to apply the rules.
+* And finally, they formulate new rules as they mature to become experts in their domains.
+====
+
 
 == !
 
 [{hidecaption}]
 .Scaling expertise across teams is even tougher.
 image::5248624748_885057e7a5_b.jpg[]
+
+[NOTE]
+[role="speaker"]
+====
+* Scaling the Dreyfus model across to teams and organizations takes even more time.
+* You need competent people to pass on their knowledge to the less fortunate ones.
+* Self-discovery takes time.
+* Self-discovery without automation to aid in gaining competence takes time.
+====
 
 
 [.topic.source]
@@ -97,17 +148,46 @@ image::5248624748_885057e7a5_b.jpg[]
 * Available as an _Eclipse plugin_ and a _CLI tool_.
 ** for now...
 
+[NOTE]
+[role="speaker"]
+====
+* Through the automation of repetitive tasks, Forge helps  you focus on the activities that matter to your business.
+* You don't have to waste time to figure out what snippets of code really matter in using a particular feature of some framework or library.
+* Mundane tasks prone to errors can be abstracted away.
+* Forge does not constrain you to a particular language or runtime, even though it is written in Java and ships with several commands hugely relevant to Java EE.
+* Forge is available in various form factors to help different audiences - a CLI tool for command-line junkies and an Eclipse plugin for heavy-IDE users.
+* More IDE integrations are planned.
+====
+
 
 [.topic.source]
 == Install as an Eclipse plugin...
 
 image:qrcode.png[]
 
+[NOTE]
+[role="speaker"]
+====
+* You can install this as an Eclipse plugin.
+* Scan the QR code to obtain the update site and point Eclipse to it.
+====
+
 
 [.topic.source]
 == Download and get started with the CLI tool
 
 image:qrcode-cli.png[]
+
+[NOTE]
+[role="speaker"]
+====
+* You can also install this as a command-line tool.
+* Scan the QR code to obtain the download link.
+* To install, extract the zip to a location.
+* export FORGE_HOME=<install_location>
+* export PATH=$FORGE_HOME/bin:$PATH
+* You can now start Forge as 'forge'
+====
 
 
 == !
@@ -123,6 +203,11 @@ in Action
 .Create a project
 image::3743235527_eed35ccb71_o.png[]
 
+[NOTE]
+[role="speaker"]
+====
+* $ project-new --named helloforge
+====
 
 == !
 
@@ -130,12 +215,37 @@ image::3743235527_eed35ccb71_o.png[]
 .Setup JPA, CDI, BV etc.
 image::3901150974_2693a76db9_o.png[]
 
+[NOTE]
+[role="speaker"]
+====
+* $ jpa-setup --provider Hibernate
+* $ constraint-setup --providers Generic\ Java\ EE
+* $ cdi-setup
+* $ servlet-setup
+* $ ejb-setup
+* $ scaffold-setup --provider Faces
+
+* These commands are contextual as well. Try running scaffold-setup without running the previous ones.
+* Forge commands can be made to operate on the state of the project without making assumptions.
+====
 
 == !
 
 [{hidecaption}]
 .Scaffold an application
 image::4680568796_b5fa0c2885_o.png[]
+
+[NOTE]
+[role="speaker"]
+====
+* $ scaffold-setup --provider Faces
+
+* We already ran this, but you should be aware that scaffolding is a very powerful command.
+* In Forge, scaffolding can be considered as a composite command.
+* It can compose several individually meaningful commands into a composite operation whose end-result is even more meaningful.
+* Of course, you could write scaffold providers without employing these principles ;-)
+* Note that you can write your own scaffold providers.
+====
 
 
 [.topic.source]
@@ -146,6 +256,15 @@ image::4680568796_b5fa0c2885_o.png[]
 * Forge is not _constrained_ to any _framework_.
 ** Very much unlike tools tied to frameworks.
 
+[NOTE]
+[role="speaker"]
+====
+* Unlike Maven archetypes that offer limited producivity gains in project bootstrapping, Forge goes beyond just setting up the project.
+* While it is easier to create a new project with 'facets' in Forge, it is even easier to perform developer-facing tasks.
+* None of the APIs in Forge will force you to operate on some premise. Even if they do for valid reason, (say, work with Java source files), you can write your own and plug into the modular runtime employed by Forge.
+* This is unlike other tooling. If you're a framework author, you can build tooling around your framework using Forge.
+====
+
 
 [.topic.source]
 == Looking back...
@@ -154,6 +273,15 @@ image::4680568796_b5fa0c2885_o.png[]
 * It provides _'sugar'_ at a higher level than _language constructs_.
 ** Productivity is not limited by requiring you to be aware of _"syntactic sugar"_.
 ** "I need a persistence layer" vs "I need to declare a property"
+
+[NOTE]
+[role="speaker"]
+====
+* Skills levels dont really matter when you want to get more productive.
+* You may think that switching to languages with more concise syntax will make your productive by cutting down on typing.
+* Forge can help you even more, by making operations themselves more concise, so you gain more productivity combining contextual operations with concise syntax.
+* For example, you've already seen how Forge manages properties and relations in JPA entities. No longer do you need to create a field, it's getter and an optional setter. Forge 'understands' properties in the context of JPA and how to manage them.
+====
 
 
 == !
