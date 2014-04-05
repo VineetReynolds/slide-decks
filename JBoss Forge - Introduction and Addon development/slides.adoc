@@ -172,6 +172,7 @@ http://download.jboss.org/jbosstools/builds/staging/jbosstools-forge_master/all/
 ====
 * You can install this as an Eclipse plugin.
 * Scan the QR code to obtain the update site and point Eclipse to it.
+* Restart Eclipse when prompted. Start Forge with Ctrl+5.
 ====
 
 
