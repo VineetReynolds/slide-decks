@@ -1,0 +1,178 @@
+= Easier _slide decks_ with _Asciidoctor_
+Vineet Reynolds; Senior Software Engineer; Red Hat
+:license: CC BY-SA 4.0
+include::attributes.adoc[]
+
+[.topic.intro]
+== Intro
+
+[.topic.source]
+== What is Asciidoc ?
+
+====
+* AsciiDoc is a text document format for writing notes, documentation, slide shows, web pages, ...
+* Just like Markdown, but better.
+* This slide deck is authored in Asciidoc.
+====
+
+[.topic.source]
+== What is Asciidoctor ?
+
+====
+* A Ruby port of Asciidoc.
+* It is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook, EPUB3, PDF ...
+====
+
+[.topic.source]
+== Why use Asciidoctor for slides ?
+
+====
+* Slides can be authored in plain text
+* And rendered into JavaScript presentations displayed in a browser
+* You don't need to know HTML and CSS (but it helps)
+====
+
+[.topic.source]
+== Why use Asciidoctor for slides ?
+
+====
+* Forking slide decks is easier
+** You don't have to copy and paste text, images etc. from slides into your decks.
+** And you can spare others from the same pain
+====
+
+[.topic.source]
+== Authoring slides - initial setup
+
+====
+* Install http://rvm.io[RVM] (highly recommended)
+
+[source,sh]
+----
+$ \curl -sSL https://get.rvm.io | bash -s stable
+----
+
+* Install Ruby 2.1.x (for asciidoctor gem)
+
+[source,sh]
+----
+$ rvm install 2.1
+----
+
+Contd...
+====
+
+[.topic.source]
+== Authoring slides - initial setup
+
+====
+* Install the asciidoctor, tilt, slim gems
+
+[source,sh]
+----
+$ gem install asciidoctor tilt slim
+----
+
+At this point, you should have `asciidoctor` in your `PATH`.
+====
+
+
+[.topic.source]
+== Authoring slides - initial setup
+
+====
+* Clone asciidoctor-backends into your working directory
+** This is a collection of templates that transform slides authored in Asciidoc to HTML5+JS presentation decks.
+
+[source,sh]
+----
+$ git clone https://github.com/asciidoctor/asciidoctor-backends.git
+----
+====
+
+[.topic.source]
+== Authoring slides - initial setup
+
+====
+* Clone a presentation archive (DZslides, revealjs, Deck.js) into your working directory
+** We'll use DZSlides here, but you're free to choose your own
+
+[source,sh]
+----
+$ git clone https://github.com/mojavelinux/dzslides.git
+----
+====
+
+[.topic.intro]
+== Start authoring ..
+
+[.topic.source]
+== Authoring slides - editing them
+
+====
+* Start with some https://github.com/mojavelinux/decks[slide decks as reference]
+* You can use a plaintext editor (gedit, Sublime Text, ...)
+* Some have asciidoctor plugins
+* Content in the slides is mostly agnostic of the backend except in a few places
+====
+
+[.topic.source]
+== Authoring slides - editing them
+
+====
+* Have the http://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor Writers's guide] at hand
+* Every slide deck is a new document
+* Every slide in the deck is a new section
+* Add lists, images to slides just as you would in any Asciidoc document
+====
+
+[.topic.source]
+== Authoring slides - editing them
+
+====
+* Add features through custom classes
+** Style the text by applying custom styles, like `[.topic.source]` or `[.topic.intro]`
+** Add slide transitions `[.incremental]`
+** Add speaker notes
+
+[source]
+----
+[NOTE]
+[role="speaker"]
+----
+====
+
+
+[.topic.source]
+== Authoring slides - rendering HTML
+
+====
+* Run the asciidoctor processor over your document
+
+[source,sh]
+----
+$ asciidoctor -b dzslides -T asciidoctor-backends/slim/dzslides <your_asciidoc_slide_deck>.adoc
+----
+====
+
+[.topic.source]
+== Using DZSlides shells
+
+====
+* Display slides onstage
+* Embed slide decks in web pages
+====
+
+[.topic.source]
+== References
+
+====
+* http://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor Writers's guide]
+* https://github.com/mojavelinux/decks[Slide decks]
+====
+
+[.topic.ending]
+== !
+
+[.footer]
+Questions?
